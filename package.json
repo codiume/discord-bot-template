@@ -1,0 +1,34 @@
+{
+  "name": "discord-bot-template",
+  "version": "1.0.0",
+  "description": "Discord bot template",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "concurrently -k -p '[{name}]' -n 'Esbuild,Nodemon' -c 'cyan.bold,green.bold' 'npm run esbuild:watch' 'npm run nodemon:watch'",
+    "start": "node dist/main.js",
+    "build": "npm run lint:fix && npm run esbuild:build",
+    "esbuild:watch": "npm run esbuild:build -- --watch",
+    "esbuild:build": "esbuild --bundle src/index.js --outfile=dist/main.js --platform=node --target=node16.14",
+    "nodemon:watch": "nodemon dist/main.js",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "prepare": "husky install"
+  },
+  "author": "Mohammed",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "esbuild": "^0.14.27"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "husky": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
