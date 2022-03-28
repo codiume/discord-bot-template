@@ -1,7 +1,8 @@
 # Discord Bot Template
 
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)
-![GitHub](https://img.shields.io/github/license/codiume/discord-bot-template)
+
+A simple template to start to code your own and personalized discord bot in Javascript.
 
 ## Run Locally
 
