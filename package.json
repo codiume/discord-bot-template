@@ -15,7 +15,7 @@
   "author": "Mohammed",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/builders": "^0.12.0",
+    "@discordjs/builders": "^0.16.0",
     "@discordjs/rest": "^0.3.0",
     "chalk": "^5.0.1",
     "discord-api-types": "^0.30.0",
