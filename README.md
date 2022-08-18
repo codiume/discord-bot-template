@@ -9,7 +9,7 @@ A simple template to start to code your own and personalized discord bot in Java
 Clone the project
 
 ```bash
-  git clone https://link-to-project fancy-bot
+  git clone git@github.com:codiume/discord-bot-template.git fancy-bot
 ```
 
 Go to the project directory
