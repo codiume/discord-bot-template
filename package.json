@@ -13,7 +13,7 @@
     "prepare": "husky install"
   },
   "author": "Mohammed",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@discordjs/builders": "^1.0.0",
     "@discordjs/rest": "^1.0.0",
@@ -23,13 +23,13 @@
     "dotenv": "^16.0.0"
   },
   "devDependencies": {
-    "eslint": "8.22.0",
-    "eslint-config-standard": "17.0.0",
-    "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-n": "15.2.5",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "6.0.1",
-    "husky": "8.0.1",
-    "nodemon": "2.0.19"
+    "eslint": "^8.22.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.1",
+    "husky": "^8.0.1",
+    "nodemon": "^2.0.19"
   }
 }
