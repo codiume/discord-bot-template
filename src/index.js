@@ -1,11 +1,16 @@
 import 'dotenv/config';
-import { Client, Intents } from 'discord.js';
+import { Client, GatewayIntentBits } from 'discord.js';
 import { loadCommands } from './utils/load-commands';
 import { loadEvents } from './utils/load-events';
 
 (async () => {
   // Create a new client instance
-  const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+  const client = new Client({
+    intents: [
+      GatewayIntentBits.Guilds,
+      GatewayIntentBits.GuildMembers
+    ]
+  });
 
   loadCommands(client);
 
