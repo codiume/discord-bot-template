@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import { Client, GatewayIntentBits } from 'discord.js';
+import { loadEvents } from './utils/loadEvents.js';
 
 class DiscordTemplate {
   constructor(client) {
@@ -10,13 +11,11 @@ class DiscordTemplate {
         GatewayIntentBits.MessageContent
       ]
     });
-
-    this.client.once('ready', () => {
-      console.log(`Logged in as ${this.client.user.tag}`);
-    });
   }
 
-  start() {
+  async start() {
+    await loadEvents(this.client);
+
     this.client.login(process.env.DISCORD_BOT_TOKEN);
   }
 }
