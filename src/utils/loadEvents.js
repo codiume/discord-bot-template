@@ -14,7 +14,7 @@ export async function loadEvents(client) {
       const { default: event } = await import(`file://${path.join(eventsPath, file)}`);
       const eventName = path.parse(file).name;
 
-      client[event.once ? 'once' : 'on'](eventName, (...args) => event.execute(...args));
+      client[event.once ? 'once' : 'on'](eventName === 'interaction' ? 'interactionCreate' : eventName, (...args) => event.execute(...args));
       console.log(`✅ Loaded event: ${eventName}`);
     }
   } catch (error) {
