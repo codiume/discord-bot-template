@@ -1,25 +1,25 @@
 import 'dotenv/config';
 import { Client, GatewayIntentBits } from 'discord.js';
-import { loadCommands } from './utils/load-commands';
-import { loadEvents } from './utils/load-events';
 
-(async () => {
-  // Create a new client instance
-  const client = new Client({
-    intents: [
-      GatewayIntentBits.Guilds,
-      GatewayIntentBits.GuildMembers
-    ]
-  });
+class DiscordTemplate {
+  constructor(client) {
+    this.client = client || new Client({
+      intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent
+      ]
+    });
 
-  loadCommands(client);
-
-  loadEvents(client);
-
-  // Login to Discord with your client's token
-  try {
-    await client.login(process.env.DISCORD_BOT_TOKEN);
-  } catch (error) {
-    process.exit(1);
+    this.client.once('ready', () => {
+      console.log(`Logged in as ${this.client.user.tag}`);
+    });
   }
-})();
+
+  start() {
+    this.client.login(process.env.DISCORD_BOT_TOKEN);
+  }
+}
+
+const bot = new DiscordTemplate();
+bot.start();
