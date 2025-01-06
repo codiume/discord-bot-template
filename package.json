@@ -1,13 +1,12 @@
 {
   "name": "discord-bot-template",
-  "version": "2.0.0",
+  "version": "2.5.0",
   "description": "Discord bot template",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon --experimental-specifier-resolution=node src/index.js",
     "start": "node --experimental-specifier-resolution=node src/index.js",
-    "commands:deploy": "node --experimental-specifier-resolution=node src/deploy.js",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "prepare": "husky install"
