@@ -1,6 +1,6 @@
 import { SlashCommandBuilder } from 'discord.js';
-import { uptimeEmbed, uptimeError } from '../utils/embeds/uptime/index.js';
-import { formatUptime } from '../utils/formatUptime.js';
+import { uptimeEmbed, uptimeError } from '../../utils/embeds/uptime/index.js';
+import { formatUptime } from '../../utils/formatUptime.js';
 
 export default {
   data: new SlashCommandBuilder()

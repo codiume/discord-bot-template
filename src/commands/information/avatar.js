@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from 'discord.js';
-import { avatarEmbed } from '../utils/embeds/avatar/index.js';
+import { avatarEmbed } from '../../utils/embeds/avatar/index.js';
 
 export default {
   data: new SlashCommandBuilder()

@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from 'discord.js';
-import { pingEmbed } from '../utils/embeds/ping/index.js';
+import { pingEmbed } from '../../utils/embeds/ping/index.js';
 
 export default {
   data: new SlashCommandBuilder()

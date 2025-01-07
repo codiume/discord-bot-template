@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from 'discord.js';
-import { serverInfoEmbed, guildError } from '../utils/embeds/server/index.js';
+import { serverInfoEmbed, guildError } from '../../utils/embeds/server/index.js';
 
 export default {
   data: new SlashCommandBuilder()
