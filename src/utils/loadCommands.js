@@ -1,7 +1,7 @@
-import { readdir } from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { REST, Routes } from 'discord.js';
+import getCommandFiles from './getCommandFiles.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -10,10 +10,10 @@ export async function loadCommands(client) {
   const commands = [];
 
   try {
-    const commandFiles = (await readdir(commandsPath)).filter(file => file.endsWith('.js'));
+    const commandFiles = await getCommandFiles(commandsPath);
 
     for (const file of commandFiles) {
-      const { default: command } = await import(`file://${path.join(commandsPath, file)}`);
+      const { default: command } = await import(`file://${file}`);
 
       if (!command?.data?.name) {
         console.warn(`⚠️ Skipped invalid command file: ${file}`);
