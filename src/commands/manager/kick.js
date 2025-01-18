@@ -8,7 +8,8 @@ export default {
     .addUserOption(option =>
       option.setName('target')
         .setDescription('The user to kick')
-        .setRequired(true)),
+        .setRequired(true))
+    .setDefaultMemberPermissions(PermissionFlagsBits.ModerateMembers),
   async execute(interaction) {
     if (!interaction.memberPermissions?.has(PermissionFlagsBits.KickMembers)) {
       return interaction.reply({

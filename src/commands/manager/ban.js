@@ -12,7 +12,8 @@ export default {
     .addStringOption(option =>
       option.setName('reason')
         .setDescription('The reason for the ban')
-        .setRequired(false)),
+        .setRequired(false))
+    .setDefaultMemberPermissions(PermissionFlagsBits.ModerateMembers),
   async execute(interaction) {
     if (!interaction.memberPermissions?.has(PermissionFlagsBits.BanMembers)) {
       return interaction.reply({
