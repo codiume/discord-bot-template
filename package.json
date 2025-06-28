@@ -19,7 +19,7 @@
     "chalk": "^5.0.1",
     "discord-api-types": "^0.38.0",
     "discord.js": "^14.16.0",
-    "dotenv": "^16.0.0"
+    "dotenv": "^17.0.0"
   },
   "devDependencies": {
     "eslint": "^8.22.0",
